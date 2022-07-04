@@ -2,9 +2,14 @@
 
 for bookmark in 1 2 3 4 5 6 7 8 9 0
 do
-	folder="$(bookmark_handler.sh "get" "$bookmark")"
-	if [[ "$folder" == "" || ! -d "$folder" ]]; then
+	output="$(bookmark_handler.sh "get" "$bookmark")"
+	exit_status="$?"
+	if [[ "$exit_status" != "0" ]]; then
 		echo $bookmark
+		if [[ "$exit_status" == "2" ]]; then
+			exit 2
+		fi
+
 		exit 0
 	fi
 done

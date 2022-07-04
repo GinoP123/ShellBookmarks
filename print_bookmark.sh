@@ -1,16 +1,16 @@
 #!/bin/zsh
 
-folder=$(bookmark_handler.sh "get" "$1")
+if [[ "$2" != "" ]]; then
+    echo -n "\n\tDeleted Bookmark $1 path: $2\n\n"
+    exit 0
+fi
 
-if [[ $? != "0" ]]; then
-    echo -e "\n\tERROR, Invalid Syntax\n"
+folder=$(bookmark_handler.sh "get" "$1")
+exit_status=$?
+if [[ $exit_status == "3" ]]; then
+    echo -e "\n\tERROR, Invalid Syntax\n\n"
     exit 1
 fi
 
-if [[ "$2" == "delete" ]]; then
-    echo -n "\n\tDeleted Hotkey $1 path: $folder\n\n"
-else
-    echo -n "\n\tHotkey $1 path: $folder\n\n"
-fi
+echo -n "\n\tBookmark $1 path: $folder\n\n"
 
-exit 0

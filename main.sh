@@ -6,8 +6,9 @@ fi
 
 alias p="print_bookmark.sh"
 alias s="set_next_bookmark.sh"
-alias ss="source cycle_bookmarks.sh"
-alias dd="source cycle_bookmarks.sh delete"
+alias d="bookmark_handler.sh delete"
+alias ss=". cycle_bookmarks.sh"
+alias dd=". cycle_bookmarks.sh delete"
 
 goto()
 {
