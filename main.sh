@@ -4,7 +4,7 @@ if [[ "$PATH" != *"$(dirname "$0")"* ]]; then
 	export PATH="$PATH:$(dirname "$0")"
 fi
 
-alias p="print_bookmark.sh"
+alias y="print_bookmark.sh"
 alias s="set_next_bookmark.sh"
 alias d="bookmark_handler.sh delete"
 alias ss=". cycle_bookmarks.sh"
