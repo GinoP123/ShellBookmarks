@@ -1,10 +1,12 @@
 #!/bin/zsh
 
-dir="$(dirname "$0")"
-if [[ ! -e "$dir" ]]; then
-	dir=$("$BASH_SOURCE/get_abs_path.sh" "$BASH_SOURCE")
+if [[ "$SHELL" == *bash* ]]; then
+	dir="$(dirname "$BASH_SOURCE")"
+else
+	dir="$(dirname "$0")"
 fi
 
+dir=$("$dir/get_abs_path.sh" "$dir")
 if [[ "$PATH" != *"$dir"* ]]; then
 	export PATH="$PATH:$dir"
 fi
@@ -30,3 +32,4 @@ alias 6="goto 6"
 alias 7="goto 7"
 alias 8="goto 8"
 alias 9="goto 9"
+
