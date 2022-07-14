@@ -1,7 +1,12 @@
 #!/bin/zsh
 
-if [[ "$PATH" != *"$(dirname "$0")"* ]]; then
-	export PATH="$PATH:$(dirname "$0")"
+dir="$(dirname "$0")"
+if [[ ! -e "$dir" ]]; then
+	dir=$("$BASH_SOURCE/get_abs_path.sh" "$BASH_SOURCE")
+fi
+
+if [[ "$PATH" != *"$dir"* ]]; then
+	export PATH="$PATH:$dir"
 fi
 
 alias y="print_bookmark.sh"
