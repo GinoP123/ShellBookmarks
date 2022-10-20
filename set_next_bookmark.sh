@@ -7,7 +7,7 @@ if [[ $? != "0" ]]; then
 fi
 
 if [[ "$exit_status" == "1" ]]; then
-	echo -n "\n\tERROR, All Hotkeys Filled\n"
+	echo -ne "\n\tERROR, All Hotkeys Filled\n"
 	exit 1
 elif [[ "$exit_status" == "2" ]]; then
 	bookmark_handler.sh "delete" $bookmark
