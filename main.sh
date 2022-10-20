@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 if [[ "$SHELL" == *bash* ]]; then
 	dir="$(dirname "$BASH_SOURCE")"

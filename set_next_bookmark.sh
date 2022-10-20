@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 bookmark=$(get_current_bookmark.sh)
 if [[ $? != "0" ]]; then

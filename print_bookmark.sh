@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 if [[ "$2" != "" ]]; then
     echo -n "\n\tDeleted Bookmark $1 path: $2\n\n"

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 if [[ "$1" == https://* ]]; then
 	echo "$1"

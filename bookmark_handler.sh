@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 suffix="_file.txt"
 bookmark="$2"

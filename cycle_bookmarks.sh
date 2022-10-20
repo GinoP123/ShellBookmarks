@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 current_bookmark=$(get_current_bookmark.sh)
 found=$?
