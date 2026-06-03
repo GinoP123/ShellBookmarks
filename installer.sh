@@ -18,6 +18,9 @@ do
 	touch "$curr_dir/bookmark_files/${file}_file.txt"
 done
 
+echo "$HOME/Downloads" > "$curr_dir/bookmark_files/0_file.txt"
+echo "$HOME/Desktop" > "$curr_dir/bookmark_files/9_file.txt"
+
 if [[ $(cat "$alias_path") != *ShellBookmarks* ]]; then
 	echo -e $source_line >> $alias_path
 	echo -e "\n\tSuccessfully installed ShellBookmarks!\n"
