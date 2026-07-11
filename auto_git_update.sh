@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+message="Update $(date)"
+for bookmark in 1 2 3 4 5 6 7 8
+do
+	directory=$("$(dirname "$0")/bookmark_handler.sh" get $bookmark)
+	if [[ -d "$directory/.git" && directory != '' ]]; then
+		cd $directory
+		git pull origin main
+		git add .
+		git commit -m "$message"
+	fi
+done
+
+ 
