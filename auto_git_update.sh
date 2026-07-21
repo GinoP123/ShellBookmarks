@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-message="Auto Git Update $(date)"
+message="Auto Git Update"
 for bookmark in 1 2 3 4 5 6 7 8
 do
 	directory=$("$(dirname "$0")/bookmark_handler.sh" get $bookmark)
