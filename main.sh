@@ -6,7 +6,7 @@ else
 	dir="$(dirname "$0")"
 fi
 
-dir=$("$dir/get_abs_path.sh" "$dir")
+dir=$(realpath "$dir")
 if [[ "$PATH" != *"$dir"* ]]; then
 	export PATH="$PATH:$dir"
 fi
